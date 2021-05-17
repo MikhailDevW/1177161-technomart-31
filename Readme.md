@@ -1,7 +1,7 @@
 # Личный проект «Техномарт»
 
 * Студент: [Mikhail](https://up.htmlacademy.ru/htmlcss/31/user/1177161).
-* Наставник: `Неизвестно`.
+* Наставник: [Виктор Кан](https://htmlacademy.ru/profile/viktorkan).
 
 ---
 
