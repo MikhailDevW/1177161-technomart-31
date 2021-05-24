@@ -55,7 +55,7 @@
 
     <main>
         <ul class="breadcrumbs">
-            <li><a href="index.html"><img src="" alt="Главная"></a></li>
+            <li><a href="index.html"><span>Главная</span></a></li>
             <li><a href="#">Каталог</a></li>
             <li><a href="#">Инструменты</a></li>
             <li><a href="#">Перфораторы</a></li>
@@ -68,16 +68,20 @@
             </fieldset>
             <fieldset>
                 <legend>Производители:</legend>
-                <label><input type="checkbox" name="bosch" checked value="">BOSCH</label>
-                <label><input type="checkbox" name="interscol" value="">ИНТЕРСКОЛ</label>
-                <label><input type="checkbox" name="Makita" checked value="">MAKITA</label>
-                <label><input type="checkbox" name="dewalt" value="">DEWALT</label>
-                <label><input type="checkbox" name="hitachi" value="">HITACHI</label>
+                <ul class="manufacture-box">
+                    <li><label><input type="checkbox" name="bosch" checked value="">BOSCH</label></li>
+                    <li><label><input type="checkbox" name="interscol" value="">ИНТЕРСКОЛ</label></li>
+                    <li><label><input type="checkbox" name="Makita" checked value="">MAKITA</label></li>
+                    <li><label><input type="checkbox" name="dewalt" value="">DEWALT</label></li>
+                    <li><label><input type="checkbox" name="hitachi" value="">HITACHI</label></li>
+                </ul>
             </fieldset>
             <fieldset>
                 <legend>Питание</legend>
-                <label><input type="checkbox" name="battery" checked value="">Аккумуляторные</label>
-                <label><input type="checkbox" name="on-grid" value="">Сетевые</label>
+                <ul class="power-type">
+                    <li><label><input type="checkbox" name="battery" checked value="">Аккумуляторные</label></li>
+                    <li><label><input type="checkbox" name="on-grid" value="">Сетевые</label></li>
+                </ul>
             </fieldset>
             <button type="submit">Показать</button>
         </form>
@@ -85,13 +89,13 @@
         <div class="sorting">
             <p>Сортировка</p>
             <ul>
-                <li><a href=""></a></li>
-                <li>По типу</li>
-                <li>По функционалу</li>
+                <li><a href="#">По цене</a></li>
+                <li><a href="#">По типу</a></li>
+                <li><a href="#">По функционалу</a></li>
             </ul>
             <ul>
-                <li><a href="#"><img src="" alt="up"></a></li>
-                <li><a href="#"><img src="" alt="down"></a></li>
+                <li><a href="#">По возрастанию</a></li>
+                <li><a href="#">По убыванию</a></li>
             </ul>
         </div>
         <div class="sorted-items">
@@ -108,8 +112,8 @@
                 <p>25500 Р.</p>
             </article>
             <article class="new">
-                <a href="#"><img src="" alt="to-buy"></a>
-                <a href="#"><img src="" alt="bookmarks"></a>
+                <a href="#">Купить</a>
+                <a href="#">В закладки</a>
                 <b>Перфоратор BOSCH BFG 6000</b>
                 <p><s>30500 Р.</s></p>
                 <p>25500 Р.</p>
