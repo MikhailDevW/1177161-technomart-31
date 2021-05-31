@@ -1,5 +1,511 @@
 /*style here*/
+@font-face{
+    font-family: "Cuprum";
+    font-style: normal;
+    font-weight: 400;
+    /* Браузер сначала попробует найти шрифт локально */
+    src: local("Cuprum"),
+         /* Если не получилось, загрузит woff2 */
+         url("/fonts/cuprum.woff2") format("woff2"),
+         /* Если браузер не поддерживает woff2, загрузит woff */
+         url("/fonts/cuprum.woff") format("woff");
+}
+
+@font-face{
+     font-family: "Cuprum";
+     font-style: bold;
+     font-weight: 700;
+     src: local("Cuprumbold"),
+          url("/fonts/cuprumbold.woff2") format("woff2"),
+          url("/fonts/cuprumbold.woff") format("woff");
+}
+
+@font-face{
+     font-family: "Cuprum";
+     font-style: italic;
+     font-weight: 700;
+     src: local("Cuprumbolditalic"),
+          url("/fonts/cuprumbolditalic.woff2") format("woff2"),
+          url("/fonts/cuprumbolditalic.woff") format("woff");
+}
+
+@font-face{
+     font-family: "Cuprum";
+     font-style: italic;
+     font-weight: 400;
+     src: local("Cuprumitalic"),
+          url("/fonts/cuprumitalic.woff2") format("woff2"),
+          url("/fonts/cuprumitalic.woff") format("woff");
+}
+
+@font-face{
+     font-family: "PTSans";
+     font-style: normal;
+     font-weight: 400;
+     src: local("PTSans"),
+          url("/fonts/ptsans.woff2") format("woff2"),
+          url("/fonts/ptsans.woff") format("woff");
+}
+
+@font-face{
+     font-family: "PTSans";
+     font-style: bold;
+     font-weight: 700;
+     src: local("PTSans"),
+          url("/fonts/ptsansbold.woff2") format("woff2"),
+          url("/fonts/ptsansbold.woff") format("woff");
+}
+
 :root{
-    --val-font-size: 15px;
-    --val-font-color: green;
+    --basic-red: #EE3643;
+    --basic-green:#63A63E;
+    --basic-grey:#3D546F;
+    --basic-greylight:#C5C5C5;
+    --basic-background:#F1F5F7;
+    --white:#FFFFFF;
+    --special-yellow:#FFBF47;
+    --success:#5FBB2D;
+    --error:#BA2732;
+}
+
+body {
+     min-width: 1200px;
+     margin: 0;
+     padding: 0;
+     background-color: var(--white);
+     font-family: "Cuprum", "Arial", sans-serif;
+     font-style: normal;
+     font-weight: normal;
+     font-size: 18px;
+     line-height: 24px;
+}
+
+a{
+     text-decoration: none;
+}
+   
+img{
+     max-width: 100%;
+     height: auto;
+}
+
+/*===================================================*/
+.main-header{
+     background-color: #F1F5F7;
+}
+
+.main-header .header-container{
+      background-color: #293449;
+      margin-bottom: 41px;
+      height: 47px;
+}
+
+.logo-image{
+     width: 220px;
+     height: 47px;
+     background-color: var(--basic-red);
+}
+.main-header-logo:active{
+     background-color: var(--basic-red);
+}
+
+.search-form,
+.user-menu,
+.user-menu li{
+     display: inline;
+}
+.user-menu li:last-child a{
+     background-color: var(--basic-green);
+}
+.user-menu li:last-child:hover a{
+     background-color:var(--success);
+}
+
+.user-menu li a:active{
+     color: rgba(255, 255, 255, 0.5);
+}
+
+.user-menu a{
+     color: var(--white);
+     list-style: none;
+}
+
+.about{
+     width: 940px;
+     margin: 0 auto;
+     display: flex;
+     justify-content: space-between;
+     padding-bottom: 40px;
+}
+
+.head-description{
+     font-size: 16px;
+     font-style: italic;
+     line-height: 23px;
+     color: var(--basic-red);
+}
+
+.head-contacts a{
+     font-size: 21px;
+     line-height: 30px;
+     color: var(--basic-red);
+     border:3px solid white;
+}
+
+.head-contacts address{
+     font-style: normal;
+     font-size: 14px;
+     line-height: 24px;
+     color:#32425C;
+}
+
+.head-buttons a{
+     font-size: 21px;
+     line-height: 21px;
+     color: black;
+     background-color: white;
+     padding: 12px 24px;
+}
+.head-buttons a:hover{
+     color:var(--basic-red);
+}
+.head-buttons a:active{
+     color:var(--basic-greylight);
+}
+
+.main-navigation{
+     width: 940px;
+     margin: 0 auto;
+     list-style: none;
+     padding-bottom: 60px;
+}
+
+.main-navigation ul{
+     margin:0;
+     padding: 0;
+}
+
+.main-navigation li{
+     display: inline-block;
+     white-space: nowrap;
+}
+
+.main-navigation a{
+     display: block;
+     margin-left: -5px;
+     padding: 16px 28px;
+     color:var(--white);
+     background-color: #32425C;
+}
+.main-navigation li:first-child a{
+     padding-left: 56px;
+}
+.main-navigation li:last-child a{
+     padding-right: 56px;
+}
+
+.main-navigation a:hover{
+     background-color: #293449;
+}
+
+.main-navigation a:active{
+     background-color: #1D2739;
+     color: rgba(255, 255, 255, 0.5);
+}
+
+/*=======================================*/
+.catalog{
+     margin: 0 auto;
+     width: 940px;
+     font-style: normal;
+     font-weight: bold;
+     color:var(--basic-background);
+}
+
+.catalog a{
+     color:white;
+     text-transform: uppercase;
+     padding: 10px 24px;
+     background: rgba(255, 255, 255, 0.3);
+}
+
+.catalog__item{
+     box-sizing: border-box;
+     padding-top: 20px;
+     padding-left: 23px;
+     width: 300px;
+     height: 123px;
+}
+.catalog__materials{
+     background-color: var(--special-yellow);
+}
+.catalog__instruments{
+     background-color: #3BBCE3;
+}
+.catalog__technics{
+     background-color: #DC91D8;
+}
+.catalog__sale{
+     background-color: #8ED78F;
+}
+.catalog__fright{
+     background-color: var(--special-yellow);
+}
+
+.catalog__materials a:hover,
+.catalog__instruments a:hover,
+.catalog__technics a:hover,
+.catalog__sale a:hover,
+.catalog__fright a:hover{
+     background-color: rgba(197, 197, 197, 0.3);
+}
+.catalog__materials a:active,
+.catalog__instruments a:active,
+.catalog__technics a:active,
+.catalog__sale a:active,
+.catalog__fright a:active{
+     background-color: rgba(169, 169, 169, 0.3);
+}
+
+.catalog__slider{
+     width:620px;
+     height: 266px;
+     background: url(/img/puncher.png) no-repeat var(--basic-grey);
+	background-position: center;
+	background-size: cover;
+}
+
+/*===================================================*/
+.popular-items{
+     margin: 0 auto;
+     width: 940px;
+}
+
+.catalog-items{
+     display: flex;
+     justify-content: space-between;
+     font-family: "PTSans";
+     line-height: 18px;
+     text-align: center;
+}
+
+.catalog-items s{
+     color: #a9a9a9;
+}
+
+.catalog-items p:last-child{
+     width: 130px;
+     font-weight: bold;
+     background-color: var(--basic-red);
+     color: white;
+}
+/*=====================================================*/
+.popular-name{
+     margin: 0 auto;
+     width: 940px;
+     margin-bottom: 70px;
+}
+
+.names-item{
+     display: flex;
+     flex-wrap: wrap;
+     justify-content: space-between;
+}
+
+.popular-item:hover{
+     filter: drop-shadow(0px 4px 20px rgba(0, 0, 0, 0.15));
+}
+
+.popular-item:active{
+     opacity: 0.5;
+     filter: drop-shadow(0px 4px 20px rgba(0, 0, 0, 0.15));
+}
+
+/*=====================================================*/
+.services{
+     width:940px;
+     margin: 0 auto;
+     padding-top: 64px;
+     background-color: var(--basic-background);
+}
+
+.services h2{
+     font-size: 30px;
+     line-height: 30px;
+     text-transform: uppercase;
+     color: black;
+}
+
+.services p{
+     width:394px;
+     font-family: "PTSans", "Arial", sans-serif;
+     font-size: 13px;
+     color: #000000;
+}
+
+.services__menu{
+     margin:0;
+     padding: 0;
+     width: 240px;
+     list-style: none;
+     background-color: var(--basic-grey);
+     color: var(--white);
+}
+
+.services__menu a{
+     display: block;
+     font-weight: bold;
+     padding: 13px 140px 17px 22px;
+     color: var(--white);
+}
+.services__menu a:hover{
+     background-color: #293449;
+}
+.services__menu a:hover:not(.active){
+     color:white;
+}
+.services__menu .active{
+     background-color: white;
+}
+.services__menu .active a{
+     color:#32425C;
+}
+
+.slides .service-item{
+     font-family: "Cuprum";
+     font-size: 30px;
+     line-height: 30px;
+     text-transform: uppercase;
+     color: #32425C;
+}
+
+.slides .service-description{
+     font-size: 13px;
+     line-height: 24px;
+     color: #000000;
+}
+
+.slides__fright{
+     width: 380px;
+}
+
+.slides__guarantee{
+     width:331px;
+}
+
+.slides__credit{
+     width: 380px;
+}
+
+
+/*=============================================*/
+.about h2,
+.contacts h2{
+     font-size: 30px;
+     line-height: 30px;
+     text-transform: uppercase;
+}
+
+.company p,
+.contacts p{
+     font-family: "PTSans", "Arial", sans-serif;
+     font-size: 13px;
+     width: 460px;
+}
+
+.company a{
+     background-color: var(--basic-red);
+     color: white;
+     padding: 11px 40px;
+     text-transform: uppercase;
+     font-size: 14px;
+     line-height: 18px;
+}
+
+.contacts a:last-child{
+     font-size: 14px;
+     line-height: 18px;
+     background-color: var(--basic-red);
+     color: white;
+     padding: 11px 61px;
+     text-transform: uppercase;
+}
+
+/*======================================*/
+.main-footer{
+     background-color: var(--basic-grey);
+}
+
+.main-footer__menu{
+     list-style: none;
+}
+
+.main-footer__menu a{
+     font-size: 18px;
+     line-height: 24px;
+     color: #F1F5F7;
+}
+.main-footer__menu a:hover{
+     text-decoration: underline;
+}
+.main-footer__menu a:active{
+     opacity: 0.5;
+}
+
+
+.main-footer__address address,
+.main-footer__address a{
+     font-size: 18px;
+     font-style: normal;
+     line-height: 24px;
+     color: #F3F7F9;
+}
+
+.main-footer__catalog{
+     list-style: none;
+}
+
+.main-footer__catalog a{
+     font-size: 18px;
+     line-height: 24px;
+     color: #FFD180;
+}
+.main-footer__catalog a:hover{
+     text-decoration: underline;
+}
+.main-footer__catalog a:active{
+     opacity: 0.5;
+}
+
+.main-footer address{
+     font-size: 16px;
+     font-style: normal;
+     line-height: 18px;
+     color: #FFFFFF;
+}
+
+.main-footer__share{
+     list-style: none;
+}
+
+.main-footer__contacts{
+     list-style: none;
+}
+
+.main-footer__contacts li{
+     font-size: 16px;
+     line-height: 18px;
+     color: #FFFFFF;
+}
+
+.main-footer__contacts a{
+     font-size: 16px;
+     line-height: 18px;
+     color: #FFD180;
+}
+.main-footer__contacts a:hover{
+     text-decoration: underline;
+}
+.main-footer__contacts a:active{
+     color: var(--basic-red);
 }
