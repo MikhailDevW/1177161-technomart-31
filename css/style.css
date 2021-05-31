@@ -6,9 +6,9 @@
     /* Браузер сначала попробует найти шрифт локально */
     src: local("Cuprum"),
          /* Если не получилось, загрузит woff2 */
-         url("/fonts/cuprum.woff2") format("woff2"),
+         url("../fonts/cuprum.woff2") format("woff2"),
          /* Если браузер не поддерживает woff2, загрузит woff */
-         url("/fonts/cuprum.woff") format("woff");
+         url("../fonts/cuprum.woff") format("woff");
 }
 
 @font-face{
@@ -16,8 +16,8 @@
      font-style: bold;
      font-weight: 700;
      src: local("Cuprumbold"),
-          url("/fonts/cuprumbold.woff2") format("woff2"),
-          url("/fonts/cuprumbold.woff") format("woff");
+          url("../fonts/cuprumbold.woff2") format("woff2"),
+          url("../fonts/cuprumbold.woff") format("woff");
 }
 
 @font-face{
@@ -25,8 +25,8 @@
      font-style: italic;
      font-weight: 700;
      src: local("Cuprumbolditalic"),
-          url("/fonts/cuprumbolditalic.woff2") format("woff2"),
-          url("/fonts/cuprumbolditalic.woff") format("woff");
+          url("../fonts/cuprumbolditalic.woff2") format("woff2"),
+          url("../fonts/cuprumbolditalic.woff") format("woff");
 }
 
 @font-face{
@@ -34,8 +34,8 @@
      font-style: italic;
      font-weight: 400;
      src: local("Cuprumitalic"),
-          url("/fonts/cuprumitalic.woff2") format("woff2"),
-          url("/fonts/cuprumitalic.woff") format("woff");
+          url("../fonts/cuprumitalic.woff2") format("woff2"),
+          url("../fonts/cuprumitalic.woff") format("woff");
 }
 
 @font-face{
@@ -43,8 +43,8 @@
      font-style: normal;
      font-weight: 400;
      src: local("PTSans"),
-          url("/fonts/ptsans.woff2") format("woff2"),
-          url("/fonts/ptsans.woff") format("woff");
+          url("../fonts/ptsans.woff2") format("woff2"),
+          url("../fonts/ptsans.woff") format("woff");
 }
 
 @font-face{
@@ -52,8 +52,8 @@
      font-style: bold;
      font-weight: 700;
      src: local("PTSans"),
-          url("/fonts/ptsansbold.woff2") format("woff2"),
-          url("/fonts/ptsansbold.woff") format("woff");
+          url("../fonts/ptsansbold.woff2") format("woff2"),
+          url("../fonts/ptsansbold.woff") format("woff");
 }
 
 :root{
@@ -270,7 +270,7 @@ img{
 .catalog__slider{
      width:620px;
      height: 266px;
-     background: url(/img/puncher.png) no-repeat var(--basic-grey);
+     background: url(../img/puncher.png) no-repeat var(--basic-grey);
 	background-position: center;
 	background-size: cover;
 }
