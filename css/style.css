@@ -13,7 +13,7 @@
 
 @font-face{
      font-family: "Cuprum";
-     font-style: bold;
+     font-style: normal;
      font-weight: 700;
      src: local("Cuprumbold"),
           url("../fonts/cuprumbold.woff2") format("woff2"),
@@ -220,6 +220,10 @@ img{
      font-style: normal;
      font-weight: bold;
      color:var(--basic-background);
+     display: grid;
+     grid-template-columns: 300px 300px 300px;
+     grid-template-rows: 123px 123px 123px;
+     gap: 20px;
 }
 
 .catalog a{
@@ -238,6 +242,7 @@ img{
 }
 .catalog__materials{
      background-color: var(--special-yellow);
+     margin-right: 20px;
 }
 .catalog__instruments{
      background-color: #3BBCE3;
@@ -247,9 +252,13 @@ img{
 }
 .catalog__sale{
      background-color: #8ED78F;
+     grid-column-start: 3;
+     grid-row-start: 2;
 }
 .catalog__fright{
      background-color: var(--special-yellow);
+     grid-column-start: 3;
+     grid-row-start: 3;
 }
 
 .catalog__materials a:hover,
@@ -273,6 +282,10 @@ img{
      background: url(../img/puncher.png) no-repeat var(--basic-grey);
 	background-position: center;
 	background-size: cover;
+     grid-row-start: 2;
+     grid-row-end: 3;
+     grid-column-start: 1;
+     grid-column-end: 2;
 }
 
 /*===================================================*/
@@ -385,17 +398,11 @@ img{
      color: #000000;
 }
 
-.slides__fright{
-     width: 380px;
-}
+.slides__fright{}
 
-.slides__guarantee{
-     width:331px;
-}
+.slides__guarantee{}
 
-.slides__credit{
-     width: 380px;
-}
+.slides__credit{}
 
 
 /*=============================================*/
