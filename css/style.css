@@ -115,8 +115,9 @@ img{
 
 .logo__image{
      height: 18px;
-     padding: 9px 56px;
-    /* border-bottom: 5px solid var(--error);*/
+     padding: 11px 56px 13px 56px;
+     box-shadow: 0px 4px 0px var(--error);
+     /*border-bottom: 5px solid var(--error);*/
      background-color: var(--basic-red);
 }
 .main-header-logo:active{
@@ -133,12 +134,13 @@ img{
      margin-left: auto;
 }
 
-.user-menu li{
-     padding: 5px 16px;
+.user-menu li:not(:first-child){
+     margin-left: 16px;     
 }
 
 .user-menu li:last-child a{
-     padding: 9px 16px;
+     padding: 11px 16px 11px 16px;
+     
      background-color: var(--basic-green);
 }
 .user-menu li:last-child:hover a{
@@ -177,6 +179,7 @@ input[type=submit]{
 }
 
 .head-description{
+     margin-left: 30px;
      font-size: 16px;
      font-style: italic;
      line-height: 23px;
@@ -209,8 +212,9 @@ input[type=submit]{
      color:#32425C;
 }
 
-.head-buttons a{
-     display: inline-block;
+.head-buttons{
+     display: flex;
+     align-items: flex-start;
 }
 
 .head-buttons a{
@@ -281,8 +285,7 @@ input[type=submit]{
 
 .catalog__item{
      box-sizing: border-box;
-     padding-top: 20px;
-     padding-left: 23px;
+     padding: 20px 23px;
 }
 
 .catalog__materials{
@@ -387,6 +390,7 @@ input[type=submit]{
      font-weight: bold;
      background-color: var(--basic-red);
      color: white;
+     margin-top: 10px;
 }
 
 .hot-item,
@@ -406,6 +410,11 @@ input[type=submit]{
 
 .hot-item p{
      margin: 0;
+     margin-top: 10px;
+}
+
+.hot-item img{
+     margin: 0 auto;
 }
 
 /*=====================================================*/
@@ -417,6 +426,10 @@ input[type=submit]{
      display: flex;
      flex-wrap: wrap;
      justify-content: space-between;
+}
+
+.popular-item{
+     margin-bottom: 10px;
 }
 .popular-item:hover{
      box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.15);
@@ -437,6 +450,7 @@ input[type=submit]{
 }
 
 .services h2{
+     margin: 0;
      font-size: 30px;
      line-height: 30px;
      text-transform: uppercase;
@@ -516,8 +530,10 @@ input[type=submit]{
 .about-info .wrapper{
      padding-top: 70px;
      padding-bottom: 70px;
-     display: flex;
-     justify-content: space-between;
+     display: grid;
+     grid-template-columns: 460px 300px;
+     column-gap: 170px;
+
 }
 
 .contacts{
@@ -568,23 +584,38 @@ input[type=submit]{
      background-color: var(--basic-grey);
 }
 
-.main-footer .wrapper{
+.main-footer__top .wrapper{
      display: grid;
      grid-template-columns: 333px 1fr;
-     grid-template-rows: 37px 30px 130px;
+     grid-template-rows: 65px 30px 130px;
+}
+
+.main-footer__top .footer_logo{
+     color: var(--white);
+     width: 138px;
+     height: 23px;
+     padding: 20px 41px 21px 41px;
+     box-shadow: 0px 4px 0px var(--error);
+     background-color: var(--basic-red);
 }
 
 .main-footer__menu{
+     align-self: end;
+     margin: 0;
+     padding: 0;
      display: flex;
      list-style: none;
      justify-self: end;
+}
+
+.main-footer__menu li:not(:first-child){
+     margin-left: 58px;
 }
 
 .main-footer__menu a{
      font-size: 18px;
      line-height: 24px;
      color: #F1F5F7;
-     margin-left: 58px;
 }
 .main-footer__menu a:hover{
      text-decoration: underline;
@@ -612,11 +643,14 @@ input[type=submit]{
      justify-self: end;
 }
 
+.main-footer__catalog li:not(:first-child){
+     margin-left: 58px;
+}
+
 .main-footer__catalog a{
      font-size: 18px;
      line-height: 24px;
      color: #FFD180;
-     margin-left: 58px;
 }
 .main-footer__catalog a:hover{
      text-decoration: underline;
@@ -627,8 +661,9 @@ input[type=submit]{
 
 .main-footer__bottom .wrapper{
      padding-top: 36px;
+     padding-bottom: 34px;
      display: grid;
-     grid-template-columns: 1fr 1fr 300px;
+     grid-template-columns: 390px 1fr 300px;
 }
 
 .main-footer__bottom{
@@ -643,15 +678,16 @@ input[type=submit]{
 }
 
 .main-footer__share{
+     margin: 0;
+     padding: 0;
      display: flex;
      justify-content: flex-start;
      list-style: none;
 }
 
-.main-footer__share li{
-}
-
 .main-footer__contacts{
+     margin: 0;
+     padding: 0;
      list-style: none;
      justify-self: end;
 }
